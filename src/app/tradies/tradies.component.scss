@@ -1,0 +1,83 @@
+.tradies-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 33px;
+
+    margin-top: 13px;
+    padding-bottom: 11px;
+
+    padding: 0 40px;
+
+    border-bottom: 1px solid #E2E2E2;
+    height: 77px;
+}
+
+.inputWithIcon input[type="text"] {
+    padding-left: 30px;
+    border-radius: 59px;
+    border: 0.5px solid #D6D6D6;
+}
+
+.inputWithIcon {
+    position: relative;
+}
+
+.inputWithIcon i {
+    position: absolute;
+    left: 10;
+    top: 8px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.location-input {
+    height: 36px;
+    width: 360px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
+.search {
+    background: #611F69;
+    box-shadow: 0px 2px 8px rgba(119, 119, 119, 0.55);
+    border-radius: 58px;
+    width: 260px;
+    height: 36.5px;
+    color: white;
+    cursor: pointer;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    // margin: 10px 0 13px 0;
+    height: 60px;
+    border-bottom: 1px solid #E2E2E2;
+    background-color: white;
+}
+
+.count {
+    color: #797979;
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 400;
+    word-wrap: break-word;
+    padding: 22px 0 14px 40px;
+}
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}

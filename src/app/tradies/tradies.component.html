@@ -1,0 +1,27 @@
+<app-tradie-card [tradies]="tradies" (selectUnselect)="tradieChanged($event)"
+    (selectSubTrade)="subTradie($event)"></app-tradie-card>
+
+<div class="search-container">
+    <div class="inputWithIcon">
+        <input type="text" [value]="location" placeholder="Search by location" class="location-input" (keyup)="change($event)">
+        <img class="input-icon" src="../../assets/images/location.svg"/>
+    </div>
+    <button class="search" (click)="searchTradie()">
+        <img src="../../assets/images/search.svg" />
+        Search
+    </button>
+    <div style="width: 20px; height: 0; transform: rotate(-90deg); border: 0.50px #E0E0E0 solid"></div>
+    <div style="color: #595959; font-size: 14px; font-family: Roboto; font-weight: 500; word-wrap: break-word;cursor: pointer;">Reset All</div>
+</div>
+
+<div *ngIf="jobCards.length>0">
+
+    <p class="count">100+ Tradies Available</p>
+
+
+    
+    <div  class="cards">
+        <app-job-card *ngFor="let card of filteredJobs" [job]="card"></app-job-card>
+    </div>
+    
+</div>

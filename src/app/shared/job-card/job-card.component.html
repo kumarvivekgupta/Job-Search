@@ -1,0 +1,84 @@
+
+<div class="job-card">
+   
+    <div class="header">
+        <img class="user" src="../../../assets/images/user.svg" />
+        <p class="name">{{job.firstName}} {{job.lastName}}
+        </p>
+        <img src="../../../assets/images/star.svg" />
+        <p class="rating">{{job.currentAverageRating}}</p>
+    </div>
+
+    <div style="padding: 0 0 0 17px;display: flex;justify-content: space-between;flex-direction: column;height: calc(100% - 72px);">
+        <div>
+
+            <p class="address">
+                <img src="../../../assets/images/location.svg" />
+                {{job.address}}
+            </p>
+            <p class="address"> 
+                <img src="../../../assets/images/location.svg" />
+                {{job.address}}
+            </p>
+    
+            <div style="display: flex;flex-direction: row;gap: 25px;">
+                <span *ngIf="job.isLicenced" class="checks"><img src="../../../assets/images/check.svg" />Licensed</span>
+                <span  *ngIf="job.hasAbn" class="checks"><img src="../../../assets/images/check.svg" />ABN</span>
+                <span  *ngIf="job.isRegisteredForGST" class="checks"><img src="../../../assets/images/check.svg" />GST</span>
+            </div>
+    
+            <div class="sub-trades">
+                <ng-container *ngFor="let subTrade of job.subTrade; let i=index"><span *ngIf="i<3">{{subTrade}}</span></ng-container>
+            </div>
+    
+
+        </div>
+       
+        <div *ngIf="job.workImages.length>0" class="work-images">
+            <ng-container *ngFor="let image of job.workImages; let i=index">
+                <img *ngIf="i<3" class="image"  src={{image}} />
+            </ng-container>
+            
+
+        </div>
+
+        <div  *ngIf="job.workImages.length===0" class="without-image">
+            <div class="job-type" style="padding-top: 7.5px;">
+                <img src="../../../assets/images/job-type.svg" />
+                <div>
+                    <p>Job Types</p>
+                    <span *ngFor="let type of job.workTypeArr; let i=index">{{type| titlecase}} <span *ngIf="i<job.workTypeArr.length-1" style="padding: 0 5px;">|</span></span>
+                </div>
+                
+            </div>
+            <div class="job-type">
+                <img src="../../../assets/images/resource.svg" />
+                <div>
+                    <p>Resources</p>
+                   <span>
+                    <span>
+                        Tradesman: {{job.crewMakeUp.tradesman}}
+                    </span><span style="padding: 0 5px;">|</span>
+                    <span>
+                        Apprentice: {{job.crewMakeUp.apprentice}}
+                    </span><span style="padding: 0 5px;">|</span>
+                    <span>
+                        Labourer: {{job.crewMakeUp.labourer}}
+                    </span>
+                
+                    </span>
+
+                </div>
+                
+            </div>
+           
+
+         
+        </div>
+        
+
+
+    </div>
+
+
+</div>

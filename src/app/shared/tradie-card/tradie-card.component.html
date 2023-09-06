@@ -1,0 +1,20 @@
+<div class="tradies-list" >
+    <div class="card" *ngFor="let tradie of tradies" (click)="itemClicked(tradie)"
+    [ngClass]="{'selected':tradie.checked}">
+        <img class="card-img" src="{{tradie.svg}}" />
+        <p class="text">{{tradie.name}}</p>
+    </div>
+</div>
+
+
+
+<div class="tradies-sub" *ngIf="selectedSubTradies.length>0">
+
+    <div *ngFor="let sub of selectedSubTradies" (click)="selectSub(sub)" [ngClass]="{'select-sub':subSet.has(sub)}"
+        style=" padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; border-radius: 36px; border: 0.50px #909090 solid; justify-content: center; align-items: center; gap: 10px; display: inline-flex;height: 30px;cursor: pointer;">
+        <p style="color: #595959; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word;    white-space: nowrap;">
+            {{sub}} 
+            <img *ngIf="subSet.has(sub)" style="padding-left: 8px;" src="../../../assets/images/tick.svg" /></p>
+    </div>
+
+</div>
