@@ -21,7 +21,7 @@
                 {{job.address}}
             </p>
     
-            <div style="display: flex;flex-direction: row;gap: 25px;">
+            <div class="check-list">
                 <span *ngIf="job.isLicenced" class="checks"><img src="././assets/images/check.svg" />Licensed</span>
                 <span  *ngIf="job.hasAbn" class="checks"><img src="././assets/images/check.svg" />ABN</span>
                 <span  *ngIf="job.isRegisteredForGST" class="checks"><img src="././assets/images/check.svg" />GST</span>

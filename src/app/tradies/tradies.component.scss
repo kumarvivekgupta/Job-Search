@@ -73,6 +73,7 @@
     word-wrap: break-word;
     padding: 22px 0 14px 40px;
 }
+
 .cards {
     display: flex;
     flex-direction: row;
@@ -80,4 +81,19 @@
     gap: 16px;
     padding-bottom: 20px;
     padding-left: 40px;
+}
+
+.reset-all {
+    color: #595959;
+    font-size: 14px;
+    font-weight: 500;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.ver-line {
+    width: 20px;
+    height: 0;
+    transform: rotate(-90deg);
+    border: 0.50px #E0E0E0 solid
 }
