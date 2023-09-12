@@ -2,10 +2,10 @@
 <div class="job-card">
    
     <div class="header">
-        <img class="user" src="../../../assets/images/user.svg" />
+        <img class="user" src="././assets/images/user.svg" />
         <p class="name">{{job.firstName}} {{job.lastName}}
         </p>
-        <img src="../../../assets/images/star.svg" />
+        <img src="././assets/images/star.svg" />
         <p class="rating">{{job.currentAverageRating}}</p>
     </div>
 
@@ -13,18 +13,18 @@
         <div>
 
             <p class="address">
-                <img src="../../../assets/images/location.svg" />
+                <img src="././assets/images/location.svg" />
                 {{job.address}}
             </p>
             <p class="address"> 
-                <img src="../../../assets/images/location.svg" />
+                <img src="././assets/images/location.svg" />
                 {{job.address}}
             </p>
     
             <div style="display: flex;flex-direction: row;gap: 25px;">
-                <span *ngIf="job.isLicenced" class="checks"><img src="../../../assets/images/check.svg" />Licensed</span>
-                <span  *ngIf="job.hasAbn" class="checks"><img src="../../../assets/images/check.svg" />ABN</span>
-                <span  *ngIf="job.isRegisteredForGST" class="checks"><img src="../../../assets/images/check.svg" />GST</span>
+                <span *ngIf="job.isLicenced" class="checks"><img src="././assets/images/check.svg" />Licensed</span>
+                <span  *ngIf="job.hasAbn" class="checks"><img src="././assets/images/check.svg" />ABN</span>
+                <span  *ngIf="job.isRegisteredForGST" class="checks"><img src="././assets/images/check.svg" />GST</span>
             </div>
     
             <div class="sub-trades">
@@ -44,7 +44,7 @@
 
         <div  *ngIf="job.workImages.length===0" class="without-image">
             <div class="job-type" style="padding-top: 7.5px;">
-                <img src="../../../assets/images/job-type.svg" />
+                <img src="././assets/images/job-type.svg" />
                 <div>
                     <p>Job Types</p>
                     <span *ngFor="let type of job.workTypeArr; let i=index">{{type| titlecase}} <span *ngIf="i<job.workTypeArr.length-1" style="padding: 0 5px;">|</span></span>
@@ -52,7 +52,7 @@
                 
             </div>
             <div class="job-type">
-                <img src="../../../assets/images/resource.svg" />
+                <img src="././assets/images/resource.svg" />
                 <div>
                     <p>Resources</p>
                    <span>
